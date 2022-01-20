@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+void printArray(int arr[], int size){
+  for(int i=0; i<size; i++){
+     cout<<arr[i]<<" ";
+  }
+}
+
+void sortArray(int arr[], int size){
+
+  for(int i=0; i<size; i++){
+    for(int j = 0; j<size; j++){
+      if(arr[j]>arr[j+1]){
+        swap(arr[j],arr[j+1]);
+      }
+    }
+  }
+  
+}
+
+
+int main(){
+  int size = 10;
+
+  int arr[10] = {32,234,123,23,7,17,4324,34,5345,345};
+
+  sortArray(arr,10);
+
+  printArray(arr,10);
+  
+  return 0;
+}
